@@ -1,4 +1,10 @@
 {
+  "homepage": "/react-site",
+  "private": false,
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }
