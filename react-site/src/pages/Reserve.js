@@ -1,11 +1,9 @@
 import React from 'react';
  import Header from '../components/Header';
-// import Footer from '../components/Footer';
  import ReservationForm from '../components/ReservationForm';
  import ContactForm from '../components/ContactForm';
  import Map from '../components/Map';
-
-// import '../css/Reserve.css';
+ import '../css/Reserve.css';
 
 const Reserve = () => {
     return (

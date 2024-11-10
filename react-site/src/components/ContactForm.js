@@ -28,7 +28,7 @@ const ContactForm = () => {
 
     return (
         <section className="info-section">
-            <h3>Contact Restaurant</h3>
+            <h2>Contact Restaurant</h2>
             <form onSubmit={onSubmit}>
                 <p>
                     <label htmlFor="name">Name:</label>

@@ -15,6 +15,9 @@ body{
   ul {
     list-style: none;
   }
+  h2{
+    font-size: 30px;
+  }
   
   /* Header */
   header {

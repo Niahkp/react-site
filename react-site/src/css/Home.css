@@ -29,7 +29,9 @@ ul {
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
 }
+
 h1{
     text-align: center;
 }
@@ -39,7 +41,7 @@ h1{
     text-align: center;
 }
 
-.content h2 {
+.content h1 {
     font-size: 40px;
     margin-bottom: 20px;
 }

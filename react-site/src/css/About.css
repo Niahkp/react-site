@@ -100,6 +100,13 @@ nav {
     padding: 50px;
     text-align: center;
 }
+.about-us p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+.about-us h1{
+    font-size: 40px;
+}
 
 /* Ingredients Section */
 .ingredients {
@@ -165,7 +172,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    /*background-image: url('./images/new-cater.jpg'); /* Adjust if using public folder */
+    /*background-image: url('/images/new-cater.jpg'); /* Adjust if using public folder */
     background-size: cover;
     background-position: center;
 }

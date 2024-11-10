@@ -1,11 +1,12 @@
 import React from 'react';
+import '../css/Reserve.css';
 
 const ReservationForm = () => {
 
 return(
 
 <section className ="info-section">
-<h3>Reservation Form</h3>
+<h2>Reservation Form</h2>
 <p>Please fill out the reservation form below to reserve a table at The Burger Palace.</p>
 <form id="form-reservation">
     <p>

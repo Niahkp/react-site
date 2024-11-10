@@ -3,11 +3,12 @@ import Footer from '../components/Footer';
 import '../css/Home.css';
 
 const Home = () => {
+    const backgroundImage = "url('images/bg.jpeg')";
     return(
         <><>
-            <section className="main-section">
+            <section className="main-section" style={{ backgroundImage: backgroundImage }}>
                 <div className="content">
-                    <h2>The Burger Palace</h2>
+                    <h1>The Burger Palace</h1>
                     <p>Welcome to the Burger Palace! Where Where we aim to please all! Whether you're looking for a nice juicy burger, a well-rounded salad, or delicious homemade desserts, we've got something for everyone to enjoy!</p>
                 </div>
             </section>
