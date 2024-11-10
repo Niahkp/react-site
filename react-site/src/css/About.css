@@ -172,7 +172,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px;
-    /*background-image: url('/images/new-cater.jpg'); /* Adjust if using public folder */
+    /*background-image: url('/images/new-cater.jpg'); */
     background-size: cover;
     background-position: center;
 }

@@ -3,10 +3,10 @@ import Footer from '../components/Footer';
 import '../css/About.css'
 
 const About = () => {
+    const backgroundImage = "url('images/new-cater.jpg')";
     return(
         <><>
-            <section className="top-section">
-                <img src="images/new-cater.jpg" alt="About Us" />
+            <section className="top-section"style={{ backgroundImage: backgroundImage }}>
                 <div className="content">
                 </div>
             </section>
