@@ -1,199 +1,368 @@
-:root {
-    --main-yellow: lightyellow;
-    --mid-body: rgb(80, 80, 80);
-    --inside-mid-body: gray;
-}
-
-/* Structure */
-body {
-    font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: rgb(20, 20, 20);
+/*structure*/
+body{
+    height: 100%;
     margin: 0;
-    padding: 0; 
-}
-
-a {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+  }
+  
+  a {
     text-decoration: none;
     color: inherit;
-}
-
-ul {
+  }
+  
+  ul {
     list-style: none;
-    padding: 0;
-}
-
-/* Header */
-header {
+  }
+  
+  /* Header */
+  header {
     background-color: black;
     padding: 20px;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.logo a {
+  }
+  .logo a{
     color: white;
     font-size: medium;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
-}
-
-.logo h1 {
+  }
+  
+  .logo h1 {
     color: rgb(255, 193, 7);
-    font-size: 24px;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    transition: max-height 0.3s ease-in-out;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links li {
+    margin-left: 30px;
+  }
+  
+  .nav-links a {
     font-size: 18px;
     color: white;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: rgb(255, 193, 7);
-}
-
-/* Menu Toggle */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-    transition: 0.4s;
-}
-
-h1 {
-    text-align: center;
-}
-
-hr {
-    border: 1px solid white;
+  }
+  
+  /* Main Section */
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    /*background-image: url('images/bg.jpeg');*/
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .content {
+    max-width: 50%;
+  }
+  
+  .content h2 {
+    font-size: 50px;
     margin-bottom: 20px;
-}
-
-/* Flex Container for Reviews */
-.flex-container {
+  }
+  
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .parallax {
+    height: 100%;
+    opacity: 0.65;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* So we can center content inside */
+  }
+  
+  /*.home {
+    background-image: url("images/new-about.jpg");
+  }*/
+  .info-section columns{
     display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Review Section Styling */
-.review-section {
-    max-width: 1200px;
-    width: 100%;
-    background-color: var(--mid-body);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.review-container {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    justify-content: space-around;
-}
-
-/* Individual Review Styling */
-.review {
-    background-color: var(--inside-mid-body);
-    padding: 20px;
-    border-radius: 15px;
-    width: calc(33.333% - 20px); /* Responsive width for larger screens */
+    padding: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info-section {
+    background-color: rgb(80, 80, 80);
+    align-items: center;
     text-align: center;
+    font-size: 36px;
+    flex: 1;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #ffffff;
+  }
+  
+  .info-section section {
+    padding: 0 10px;
+    margin: 0 10px;
+    flex: 1;
+  }
+  
+  img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .info-section img {
+    max-width: 300px;
+  }
+  
+  .text-center p {
+    width: 60%;
+    margin: auto;
+  }
+  
+  /* Main Menu */
+  #main-menu {
+    z-index: 1;
+    background-color: #595a5c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  #main-menu ul {
+    float: right;
+    overflow: hidden;
+    margin-right: 2%;
+  }
+  
+  #main-menu li {
+    list-style-type: none;
+    display: inline-block;
+  }
+  
+  #main-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  
+  .info-section form {
+    /*margin-right: 10px;*/
+    max-width: 100%;
+  }
+  
+  /* Form */
+  form {
+    /*margin: 0 2%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  form label {
+    /*font-size: 0.75em;
+    display: block; */
+
+    display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+
+  }
+
+  form p {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /*form input:not([type="checkbox"]):not([type="radio"]),
+  form textarea,
+  form button,
+  select {
+    font-size: 0.75em;
+    width: 200px;
+    padding: 5px;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 20px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .inline {
+    display: inline;
+  }
+  
+  form textarea {
+    min-height: 200px;
+  }
+  
+  #form-raccoon p {
+    margin-bottom: 1%;
+  } */
+  
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.review img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+textarea {
+  height: 150px;
+  resize: vertical;
 }
 
-.review h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+button[type="submit"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: rgb(255, 193, 7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 16px;
 }
 
-.review p {
-    font-size: 16px;
-}
 
-/* Responsive Styles */
-@media (max-width: 700px) {
-    .review-container {
-        display: block; 
+  #map {
+    /*display: block;
+    padding: 5px;
+    max-width: 100%;
+    width: 40%;
+    margin: 0 2%;*/
+    width: 160%;
+    /*max-width: 500px; */
+    height: 300px; 
+    border: none; 
+    /*margin-top: 20px;*/
+    border-radius: 5px;
+
+  }
+
+  #map-container {
+    width: 100%;
+    max-width: 500px; 
+    margin-top: 16px;
+  }
+  
+  /* Typography */
+  .parallax h1 {
+    text-align: center;
+    color:rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    font-size: 5em;
+  }
+  
+  .parallax h3 {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 25%;
+    font-size: 3em;
+  }
+  
+  .down-arrow {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+  }
+  
+  .info-section h3 {
+    text-align: center;
+  }
+  
+  h4 {
+    font-size: 1em;
+    font-weight: 100;
+  }
+  
+  p {
+    font-size: 0.75em;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Larger resolutions */
+  @media only screen and (min-width: 600px) {
+    .columns {
+      display: flex;
+      justify-content: center;
+    }
+    .flex2 {
+      flex: 2;
+    }
+  
+    .flex1 {
+      flex: 1;
     }
 
-    .review {
-        width: 100%;          
-        text-align: left;      
-        padding: 20px;      
-        margin-bottom: 20px;   
-        background-color: var(--inside-mid-body); 
-        box-sizing: border-box; 
-        border-radius: 10px;  
+    #map-container {
+        max-width: 900px;
+      }
+    
+      #map {
+        height: 500px;
+      }
+  }
+  
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
     }
-
-    .review img {
-        float: left;          
-        margin-right: 15px;    
-        width: 80px;           
-        height: 80px;
-    }
-
-    .review h3 {
-        font-size: 18px;       
-    }
-
-    .review p {
-        font-size: 16px;       
-        margin-top: 5px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        max-height: 0;
-        display: flex;
-        width: 100%;
-        overflow: hidden;
-        background-color: black;
-    }
-
-    .nav-links.active {
-        max-height: 300px; 
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
+  }

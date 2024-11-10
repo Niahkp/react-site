@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Reserve.css";
 
 const ContactForm = () => {
     const onSubmit = async (event) => {

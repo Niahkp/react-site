@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ReservationForm = () => {
-    
+
+return(
+
 <section className ="info-section">
 <h3>Reservation Form</h3>
 <p>Please fill out the reservation form below to reserve a table at The Burger Palace.</p>
@@ -46,5 +48,6 @@ const ReservationForm = () => {
     </p>
 </form>
 </section>
+    );
 };
 export default ReservationForm;
