@@ -10,7 +10,7 @@ const LunchPage = () => {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const response = await fetch('pages/menu.json');
+       const response = await fetch('./menu.json');
         const data = await response.json();
         setMenuItems(data.menuItems);
       } catch (error) {
