@@ -5,10 +5,11 @@ import '../css/About.css'
 const About = () => {
     return(
         <><>
-            {/* <section className="top-section">
+            <section className="top-section">
+                <img src="images/new-cater.jpg" alt="About Us" />
                 <div className="content">
                 </div>
-            </section> */}
+            </section>
             <hr />
             <section className="about-us">
                 <h1>About Us</h1>
