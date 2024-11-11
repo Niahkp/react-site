@@ -1,32 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import MenuItem from '../components/MenuItem';
-import Modal from '../components/Modal';
 import '../css/Lunch.css';
+import axios from "axios";
 
 const LunchPage = () => {
   const [menuItems, setMenuItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
-    const fetchMenuItems = async () => {
-      try {
-       const response = await fetch('./menu.json');
-        const data = await response.json();
-        setMenuItems(data.menuItems);
-      } catch (error) {
-        console.error('Error fetching menu items:', error);
-      }
-    };
-    fetchMenuItems();
-  }, []);
+    (async () => {
+      const response = await axios.get("http://localhost:3002/api/lunch_menu");
+      setMenuItems(response.data);
+    })();
 
-  const openModal = (item) => {
-    setSelectedItem(item);
-  };
-
-  const closeModal = () => {
-    setSelectedItem(null);
-  };
+  
+  }, [])
 
   return (
     <div>
@@ -36,12 +23,10 @@ const LunchPage = () => {
         <hr />
         <div className="menu-grid">
           {menuItems.map((item) => (
-            <MenuItem key={item._id} item={item} onClick={() => openModal(item)} />
+            <MenuItem key={item._id} item={item}  />
           ))}
         </div>
       </main>
-
-      {selectedItem && <Modal item={selectedItem} onClose={closeModal} />}
     </div>
   );
 };
