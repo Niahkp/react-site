@@ -9,11 +9,6 @@ const AddMenuItem = (props) => {
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
-// const handleChange = (event) => {
-//     const { name, value } = event.target;
-//     setInputs((prevValues) => ({ ...prevValues, [name]: value }));
-//   };
-
   const handleImageChange = (event) => {
     const name = event.target.name;
     const value = event.target.files[0];
@@ -24,7 +19,6 @@ const AddMenuItem = (props) => {
     event.preventDefault();
     setResult("Submitting...");
 
-    //try {
     const formData = new FormData(event.target);
     console.log(...formData);
     
@@ -32,28 +26,13 @@ const AddMenuItem = (props) => {
     const response = await fetch("http://localhost:3000/api/house_plans", {
         method: "POST",
         body: formData
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
-        //body: JSON.stringify(inputs),
       });
 
-    //   if (response.ok) {
-    //     const newItem = await response.json();
-    //     setResult("Menu item successfully added!");
-    //     showNewItem(newItem);
-    //     event.target.reset();
-    //     closeDialog();
-    //   } else {
-    //     setResult("Error adding menu item.");
-    //   }
-    // } catch (error) {
-    //   setResult("Error connecting to the server.");
-    // }
-
-    if(response.status != 200){
+    if(response.status == 200){
+       const newItem = await response.json();
         setResult("New item successfully added!");
-        props.showNewItem(await response.json());
+        //props.showNewItem(await response.json());
+        props.showNewItem(newItem);
         event.target.reset();
         props.closeDialog();
       } else{
@@ -102,18 +81,6 @@ const AddMenuItem = (props) => {
               required
             />
           </p>
-          {/* <p>
-            <label htmlFor="img">Upload Image:</label>
-            <input
-              type="file"
-              id="img"
-              name="img"
-              value={inputs.img || ""}
-              onChange={handleChange}
-              required
-            />
-          </p>
- */}
             <section className="columns">
               <p id="img-prev-section">
                 <img id="img-prev" alt="" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""}/>
