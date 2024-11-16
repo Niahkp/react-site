@@ -13,7 +13,6 @@ const Lunch = () =>{
 
             <Outlet />
             <LunchPage />
-
         </>
     );
 };
