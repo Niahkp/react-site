@@ -22,8 +22,9 @@ const AddMenuItem = (props) => {
     const formData = new FormData(event.target);
     console.log(...formData);
     
-    //const response = await fetch("http://localhost:3000/api/house_plans"),{
-    const response = await fetch("http://localhost:3000/api/house_plans", {
+    // const response = await fetch("http://localhost:3000/api/house_plans", {
+        const response = await fetch("https://render-site-viib.onrender.com/api/house_plans", {
+
         method: "POST",
         body: formData
       });
@@ -31,7 +32,6 @@ const AddMenuItem = (props) => {
     if(response.status == 200){
        const newItem = await response.json();
         setResult("New item successfully added!");
-        //props.showNewItem(await response.json());
         props.showNewItem(newItem);
         event.target.reset();
         props.closeDialog();
