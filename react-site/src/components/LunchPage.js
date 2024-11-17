@@ -10,9 +10,8 @@ const LunchPage = () => {
 
   useEffect(() => {
     (async () => {
-      // const response = await axios.get("http://localhost:3000/api/house_plans");
-      const response = await axios.get("https://render-site-viib.onrender.com/api/house_plans");
-
+      // const response = await axios.get("https://render-site-viib.onrender.com/api/menu");
+      const response = await axios.get("http://localhost:3000/api/house_plans");
       setMenuItems(response.data);
     })();
   }, []);
