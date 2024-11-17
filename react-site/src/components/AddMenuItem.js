@@ -70,17 +70,6 @@ const AddMenuItem = (props) => {
               required
             />
           </p>
-          <p>
-            <label htmlFor="price">Price:</label>
-            <input
-              type="number"
-              id="price"
-              name="price"
-              value={inputs.price || ""}
-              onChange={handleChange}
-              required
-            />
-          </p>
             <section className="columns">
               <p id="img-prev-section">
                 <img id="img-prev" alt="" src={inputs.img != null ? URL.createObjectURL(inputs.img) : ""}/>
