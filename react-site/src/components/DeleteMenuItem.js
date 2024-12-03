@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
+//do we know if delete or efit works locally and or globally on here???
 const DeleteMenuItem = ({ item, closeDialog, onDelete }) => {
     const [result, setResult] = useState("");
   
     const deleteMenuItem = async (id) => {
-        const response = await fetch(`https://render-site-viib.onrender.com/api/house_plans/${id}`, {
+        const response = await fetch(`https://render-site-viib.onrender.com//${item._id}`, {
           method: "DELETE",
         });
   
@@ -15,7 +16,7 @@ const DeleteMenuItem = ({ item, closeDialog, onDelete }) => {
         } else {
           setResult("Error deleting menu item.");
         }
-    };
+    }; 
   
     return (
       <div id="delete-dialog" className="w3-modal">
