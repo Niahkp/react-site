@@ -22,8 +22,8 @@ const AddMenuItem = (props) => {
     const formData = new FormData(event.target);
     console.log(...formData);
     
-    //const response = await fetch("http://localhost:3006/api/house_plans"),{
-    const response = await fetch("https://render-site-viib.onrender.com/api/house_plans", {
+    const response = await fetch("http://localhost:3006/api/house_plans",{
+    // const response = await fetch("https://render-site-viib.onrender.com/api/house_plans", {
         method: "POST",
         body: formData
       });
