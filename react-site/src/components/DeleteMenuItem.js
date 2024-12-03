@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DeleteMenuItem = ({ props }) => {
+const DeleteMenuItem = ({ item, closeDialog, onDelete }) => {
     const [result, setResult] = useState("");
   
     const deleteMenuItem = async (id) => {
@@ -10,8 +10,8 @@ const DeleteMenuItem = ({ props }) => {
   
         if (response.status === 200) {
           setResult("Menu item successfully deleted!");
-        //   onDelete(id); 
-          props.closeDialog();
+          onDelete(id); 
+          closeDialog();
         } else {
           setResult("Error deleting menu item.");
         }
@@ -24,15 +24,15 @@ const DeleteMenuItem = ({ props }) => {
             <span
               id="dialog-close"
               className="w3-button w3-display-topright"
-              onClick={props.closeDialog}
+              onClick={closeDialog}
             >
               &times;
             </span>
             <div id="delete-content">
-              <h3>Are you sure you want to delete {props.name}?</h3>
+              <h3>Are you sure you want to delete {item.name}?</h3>
               <section>
-                <button onClick={props.closeDialog}>No</button>
-                <button onClick={props.deleteMenuItem}>Yes</button>
+                <button onClick={closeDialog}>No</button>
+                <button onClick={deleteMenuItem}>Yes</button>
               </section>
               <span>{result}</span>
             </div>
