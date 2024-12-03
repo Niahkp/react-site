@@ -10,7 +10,7 @@ const DeleteMenuItem = ({ props }) => {
   
         if (response.status === 200) {
           setResult("Menu item successfully deleted!");
-          onDelete(id); 
+        //   onDelete(id); 
           props.closeDialog();
         } else {
           setResult("Error deleting menu item.");
@@ -29,7 +29,7 @@ const DeleteMenuItem = ({ props }) => {
               &times;
             </span>
             <div id="delete-content">
-              <h3>Are you sure you want to delete {item.name}?</h3>
+              <h3>Are you sure you want to delete {props.name}?</h3>
               <section>
                 <button onClick={props.closeDialog}>No</button>
                 <button onClick={props.deleteMenuItem}>Yes</button>
