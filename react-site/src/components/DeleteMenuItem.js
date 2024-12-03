@@ -5,7 +5,7 @@ const DeleteMenuItem = ({ item, closeDialog, onDelete }) => {
     const [result, setResult] = useState("");
   
     const deleteMenuItem = async (id) => {
-        const response = await fetch(`https://render-site-viib.onrender.com/${item._id}`, {
+        const response = await fetch(`https://render-site-viib.onrender.com/api/house_plans/${item._id}`, {
           method: "DELETE",
         });
   
