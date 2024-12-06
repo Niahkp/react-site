@@ -11,12 +11,16 @@ const EditMenuItem = (props) => {
   const [result, setResult] = useState("");
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    // const { name, value } = event.target;
+    const name = event.target.name;
+    const value = event.target.value;
     setInputs((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleImageChange = (event) => {
-    const { name, files } = event.target;
+    // const { name, files } = event.target;
+    const name = event.target.name; 
+    const files = event.target.files;
     setInputs((prevState) => ({ ...prevState, [name]: files[0] }));
   };
 
